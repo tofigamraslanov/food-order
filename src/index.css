@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
 @layer base {
   * {
@@ -19,6 +19,33 @@
   }
 }
 
-.transform-img {
-  transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+@layer utilities {
+  .transform-img {
+    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+  }
+
+  .animate-appearing {
+    animation: meals-appear 1s ease-out forwards;
+  }
+
+  .font-inherit {
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid #ccc;
+  }
+
+  @keyframes meals-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
