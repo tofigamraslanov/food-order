@@ -24,6 +24,7 @@ module.exports = {
         gray: {
           350: '#ccc',
           650: '#383838',
+          750: '#363636',
           950: ' rgba(0, 0, 0, 0.75)',
         },
       },
@@ -46,10 +47,18 @@ module.exports = {
           from: { opacity: 0, transform: 'translateY(3rem)' },
           to: { opacity: 1, transform: 'translateY(0)' },
         },
+        bump: {
+          '0%': { transform: 'scale(1)' },
+          '10%': { transform: 'scale(0.9)' },
+          '30%': { transform: 'scale(1.1)' },
+          '50%': { transform: 'scale(1.15)' },
+          '100%': { transform: 'scale(1)' },
+        },
       },
       animation: {
         'slide-down': 'slide-down 300ms ease-out forwards',
         'meals-appear': 'meals-appear 1s ease-out forwards',
+        bump: 'bump 300ms ease-out',
       },
     },
   },

@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
 import Modal from '../UI/Modal';
 import CartItem from './CartItem';
-
-const DUMMY_CART_ITEMS = [{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }];
+import CartContext from '../../store/cart-context';
 
 const Cart = props => {
-  const cartItems = DUMMY_CART_ITEMS.map(cartItem => (
+  const cartContext = useContext(CartContext);
+
+  const totalAmount = `$${cartContext.totalAmount.toFixed(2)}`;
+  const hasItems = cartContext.items.length > 0;
+
+  const handleCartItemAdd = item => {
+    cartContext.addItem(item);
+  };
+  const handleCartItemRemove = id => {
+    cartContext.removeItem(id);
+  };
+
+  const cartItems = cartContext.items.map(cartItem => (
     <CartItem
       key={cartItem.id}
       id={cartItem.id}
       name={cartItem.name}
       amount={cartItem.amount}
       price={cartItem.price}
+      onAdd={handleCartItemAdd.bind(null, cartItem)}
+      onRemove={handleCartItemRemove.bind(null, cartItem.id)}
     />
   ));
 
@@ -20,7 +34,7 @@ const Cart = props => {
       <ul className="list-none m-0 p-0 max-h-80 overflow-auto">{cartItems}</ul>
       <div className="flex items-center justify-between font-bold text-2xl my-4 mx-0">
         <span>Total Amount</span>
-        <span>$52.48</span>
+        <span>{totalAmount}</span>
       </div>
       <div className="text-right">
         <button
@@ -29,7 +43,9 @@ const Cart = props => {
         >
           Close
         </button>
-        <button className="action-btn bg-yellow-750 text-white">Order</button>
+        {hasItems && (
+          <button className="action-btn bg-yellow-750 text-white">Order</button>
+        )}
       </div>
     </Modal>
   );
