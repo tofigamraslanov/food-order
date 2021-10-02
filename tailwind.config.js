@@ -30,9 +30,8 @@ module.exports = {
       },
       spacing: {
         25: '25rem',
-      },
-      padding: {
-        '10%': '10%',
+        '5%':'5%',
+        '10%':'10%'
       },
       boxShadow: {
         md: '0 2px 8px rgb(0 0 0 / 25%)',
