@@ -13,10 +13,10 @@ const CartItem = props => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row">
-        <button className="cart-btn" onClick={props.onRemove}>
+        <button className="cart-item-btn" onClick={props.onRemove}>
           -
         </button>
-        <button className="cart-btn" onClick={props.onAdd}>
+        <button className="cart-item-btn" onClick={props.onAdd}>
           +
         </button>
       </div>

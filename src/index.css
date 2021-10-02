@@ -44,11 +44,11 @@
 }
 
 @layer components {
-  .action-btn {
+  .cart-btn {
     @apply font-inherit cursor-pointer bg-transparent custom-border py-2 px-8 rounded-3xl ml-4 hover:bg-yellow-980 hover:border-yellow-980 hover:text-white active:bg-yellow-980 active:border-yellow-980 active:text-white transition-colors;
   }
 
-  .cart-btn {
+  .cart-item-btn {
     @apply font-inherit font-bold text-xl text-yellow-750 border border-solid border-yellow-750 w-12 text-center rounded-md bg-transparent cursor-pointer ml-4 m-1 hover:bg-yellow-750 hover:text-white active:bg-yellow-750 active:text-white transition-colors;
   }
 }

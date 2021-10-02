@@ -4,9 +4,6 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      width: {
-        '8/7': '110%',
-      },
       colors: {
         red: {
           750: '#641e03',
@@ -30,8 +27,9 @@ module.exports = {
       },
       spacing: {
         25: '25rem',
-        '5%':'5%',
-        '10%':'10%'
+        '5%': '5%',
+        '10%': '10%',
+        '8/7': '110%',
       },
       boxShadow: {
         md: '0 2px 8px rgb(0 0 0 / 25%)',

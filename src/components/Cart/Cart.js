@@ -38,13 +38,13 @@ const Cart = props => {
       </div>
       <div className="text-right">
         <button
-          className="action-btn text-yellow-750 border-yellow-750"
+          className="cart-btn text-yellow-750 border-yellow-750"
           onClick={props.onHideCart}
         >
           Close
         </button>
         {hasItems && (
-          <button className="action-btn bg-yellow-750 text-white">Order</button>
+          <button className="cart-btn bg-yellow-750 text-white">Order</button>
         )}
       </div>
     </Modal>
