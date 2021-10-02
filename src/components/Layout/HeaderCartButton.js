@@ -12,7 +12,7 @@ const HeaderCartButton = props => {
     return currentNumber + item.amount;
   }, 0);
 
-  const btnClasses = `cursor-pointer font-inherit font-bold border-none bg-red-850 text-white py-2 px-6 sm:px-8 md:px-12 flex justify-around items-center rounded-3xl hover:bg-red-950 active:bg-red-950 group ${
+  const btnClasses = `cursor-pointer font-inherit font-bold border-none bg-red-850 text-white py-2.5 md:py-3 px-6 md:px-12 flex justify-around items-center rounded-2xl md:rounded-3xl hover:bg-red-950 active:bg-red-950 group ${
     btnIsHighlighted ? 'animate-bump' : ''
   }`;
 
@@ -30,10 +30,7 @@ const HeaderCartButton = props => {
   }, [cartContext.items.length, items]);
 
   return (
-    <button
-      className="cursor-pointer font-inherit font-bold border-none bg-red-850 text-white py-2.5 md:py-3 px-6 md:px-12 flex justify-around items-center rounded-2xl md:rounded-3xl hover:bg-red-950 active:bg-red-950 group"
-      onClick={props.onClick}
-    >
+    <button className={btnClasses} onClick={props.onClick}>
       <span className="w-5 h-5 md:w-[1.35rem] md:h-[1.35rem] mr-2">
         <CartIcon />
       </span>
