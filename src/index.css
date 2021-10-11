@@ -51,4 +51,8 @@
   .cart-item-btn {
     @apply font-inherit font-bold text-xl text-yellow-750 border border-solid border-yellow-750 w-12 text-center rounded-md bg-transparent cursor-pointer ml-4 m-1 hover:bg-yellow-750 hover:text-white active:bg-yellow-750 active:text-white transition-colors;
   }
+
+  .spinner {
+    @apply h-12 w-12 animate-rotate text-gray-750;
+  }
 }

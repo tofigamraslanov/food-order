@@ -51,11 +51,16 @@ module.exports = {
           '50%': { transform: 'scale(1.15)' },
           '100%': { transform: 'scale(1)' },
         },
+        rotate: {
+          '0%': { transform: 'rotate(0)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         'slide-down': 'slide-down 300ms ease-out forwards',
         'meals-appear': 'meals-appear 1s ease-out forwards',
         bump: 'bump 300ms ease-out',
+        rotate: 'rotate 2s infinite linear',
       },
     },
   },
